@@ -1,0 +1,399 @@
+/* General Reset */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Container for responsive design */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header Styles */
+header {
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.image-class {
+    padding: 10px; /* Space inside the image container */
+    margin-top: 20px; /* Space above the image */
+    width: 300px;  /* Adjust this as needed */
+    height: 300px; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+
+nav ul {
+    display: flex;
+    alignment-item: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #ff577e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #fff3f5;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+.app-store-button {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Video Section Styles */
+.video-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Client Section Styles */
+.client-section {
+    padding: 40px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.client-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #ff577e;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+}
+
+/* Calculator Section Styles */
+/* Calculator Section Styles */
+.calculator-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.calculator-input {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator-input label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.calculator-input input[type="date"], 
+.calculator-input input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 250px;
+    text-align: center;
+}
+
+.cycle-adjustment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cycle-adjustment button {
+    background: #ff577e;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.cycle-adjustment input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.calculate-button {
+    background: linear-gradient(to right, #ff577e, #ff8c94);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.calculate-button:hover {
+    background: linear-gradient(to right, #ff8c94, #ff577e);
+}
+
+
+/* Contact Section Styles */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+    text-align: center; /* Center the image container */
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    max-width: 450px; /* Increased the size of the image */
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    background-color: #ff577e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .client-features {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+    }
+
+    .calculator-input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .feature i {
+        font-size: 2rem;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+    }
+}
