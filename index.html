@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeriodPal - Your Period and Ovulation Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="file:///C:/Users/LENOVO/Pictures/logo.webp" alt="Symptom" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="symptom.txt">SYMPTOMS</a></li>
+                    <li><a href="food.txt">FOOD</a></li>
+                    <li><a href="excersice.txt">EXCERSICE</a></li>
+                    <li><a href="treat.txt">TREATMENTS</a></li>
+                </ul>
+            </nav>
+            <a href="description.txt" class="cta-button">Awareness on PCO's and PCOD's</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The website to know about your fertile health</h1>
+                <p></p>
+               
+            </div>
+            <div class="hero-image">
+                <img src="file:///C:/Users/LENOVO/Pictures/picdes.jpeg" alt="Description" class='image'>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Watch what are PCO's and PDO's</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ejF9oAAU6zQ?si=DzLYui605LTuCU5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <!-- Client Section -->
+    <section class="client-section">
+        <h2>why it is important to know about PCO's and PCDO's?</h2>
+        <div class="client-features">
+            <div class="feature">
+                <i class="fas fa-bullseye"></i>
+                <h3>Early Diagnosis and Management</h3>
+                <p>PCOS and PCOD are common hormonal disorders that can lead to various health complications if left untreated. Early diagnosis helps in managing symptoms effectively and preventing severe complications like infertility, diabetes, and heart disease. Being aware of these conditions allows individuals to recognize symptoms early, seek medical help, and begin appropriate treatments or lifestyle changes to manage the conditions better.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-md"></i>
+                <h3> Impact on Physical and Mental Health</h3>
+                <p>PCOS and PCOD affect more than just reproductive health; they can cause a range of physical issues, including weight gain, excessive hair growth, acne, and metabolic issues. These symptoms can also lead to emotional and mental health struggles, including anxiety, depression, and low self-esteem. Understanding these disorders helps in creating a support system and accessing treatments that address both physical and psychological aspects.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Fertility and Family Planning</h3>
+                <p>PCOS and PCOD can affect fertility, making it challenging for many women to conceive. Knowledge of these conditions allows women to make informed decisions about family planning, explore fertility treatments if needed, and seek specialized care. It also helps in setting realistic expectations and reduces the emotional strain associated with infertility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Period Calculator Section -->
+   <section class="calculator-section">
+    <h2>Period and Ovulation Calculator</h2>
+    <div class="calculator-container">
+        <div class="calculator-input">
+            <label for="last-period">The first day of your last period</label>
+            <input type="date" id="last-period" value="2024-08-17">
+        </div>
+        <div class="calculator-input">
+            <label for="cycle-length">Average cycle length (days)</label>
+            <div class="cycle-adjustment">
+                <button type="button" onclick="adjustCycle(-1)">-</button>
+                <input type="number" id="cycle-length" value="28" min="21" max="35">
+                <button type="button" onclick="adjustCycle(1)">+</button>
+            </div>
+        </div>
+    </div>
+    <button class="calculate-button" onclick="calculateDates()">See results</button>
+
+    <!-- Results section -->
+    <div id="results" style="margin-top: 20px; display: none;">
+        <h3>Results</h3>
+        <p id="ovulation-date">Your expected ovulation date is: </p>
+        <p id="next-period-date">Your next expected period date is: </p>
+    </div>
+</section>
+<!-- Contact Section -->
+     <section class="contact-section">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="https://submit-form.com/EPf3xbWw2">
+                <label for="first-name" class="required">First name</label>
+                <input id="first-name" name="first-name" type="text" required />
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="last-name" type="text" />
+                <label for="email" class="required">Email</label>
+                <input id="email" name="email" type="email" required />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="https://i.ibb.co/PTP1jNF/Screenshot-2024-08-19-173431.png" alt="Contact Image">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Help Center</a></li>
+        </ul>
+        <p>&copy; 2024 PeriodPal. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    function adjustCycle(change) {
+        const cycleLengthInput = document.getElementById("cycle-length");
+        let currentValue = parseInt(cycleLengthInput.value);
+        
+        // Ensure cycle length stays within valid range
+        currentValue = Math.max(21, Math.min(35, currentValue + change));
+        cycleLengthInput.value = currentValue;
+    }
+
+    function calculateDates() {
+        // Get the first day of the last period and cycle length from the inputs
+        const lastPeriodDate = document.getElementById("last-period").value;
+        const cycleLength = parseInt(document.getElementById("cycle-length").value);
+        
+        // Check if inputs are valid
+        if (!lastPeriodDate || isNaN(cycleLength)) {
+            alert("Please enter a valid date and cycle length.");
+            return;
+        }
+
+        // Convert the last period date to a Date object
+        const lastPeriod = new Date(lastPeriodDate);
+
+        // Calculate the ovulation date (cycle length - 14 days)
+        const ovulationDay = new Date(lastPeriod);
+        ovulationDay.setDate(lastPeriod.getDate() + (cycleLength - 14));
+
+        // Calculate the next period date (last period + cycle length)
+        const nextPeriodDay = new Date(lastPeriod);
+        nextPeriodDay.setDate(lastPeriod.getDate() + cycleLength);
+
+        // Format the ovulation date and next period date to a readable format (e.g., YYYY-MM-DD)
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedOvulationDay = ovulationDay.toLocaleDateString(undefined, options);
+        const formattedNextPeriodDay = nextPeriodDay.toLocaleDateString(undefined, options);
+
+        // Display the results
+        document.getElementById("ovulation-date").innerText = "Your expected ovulation date is: " + formattedOvulationDay;
+        document.getElementById("next-period-date").innerText = "Your next expected period date is: " + formattedNextPeriodDay;
+
+        // Make the results section visible
+        document.getElementById("results").style.display = 'block';
+    }
+</script>
+
+
+</body>
+</html>
